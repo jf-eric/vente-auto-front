@@ -1,0 +1,49 @@
+.form-container1{
+    margin-top: 3%;
+    background-color: white;
+    width: 80.7%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px 10px 0px 0px;
+}
+.form-imgMada{
+    padding-left: 70%;
+    margin-top: -20%;
+}
+.form-containner2{
+    margin-top: -1.1%;
+    background-color: rgb(120, 120, 120);
+    width: 80.7%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 10px 10px;
+}
+.form-table{
+    border-collapse : separate;
+    border-spacing : 10px;
+
+}
+.form3{
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(120, 120, 120);
+    width: 35%;
+    color: white;
+    margin-top: 1%;
+    margin-left: 1.2%;
+    font-family: "Times New Roman";
+    font-size: 13pt;
+}
+.form-text{
+    color: navy;
+    margin-left: 25%;
+    padding-top: 2%;
+}
+.listVille{
+    margin-top: -22%;
+}
+.form-text-gratuit{
+    margin-top: -35%;
+    margin-left: 42%;
+    font-style: italic;
+    font-family: "Times New Roman";
+}

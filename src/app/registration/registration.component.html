@@ -1,0 +1,36 @@
+<form [formGroup]="formGroup" (submit)="create()">
+    <div class="toolbar-registration"> Inscription</div>
+    <div class="forme-registration">
+
+        <mat-form-field>
+            <input matInput placeholder="Entrer votre nom" formControlName="nom" [(ngModel)]="user.nom">
+            <mat-error *ngIf="this.formGroup.get('nom').invalid">Ce champ est obligatoire</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Entrer votre prenom" formControlName="prenom" [(ngModel)]="user.prenom">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Entrer votre pseudo" formControlName="pseudo" [(ngModel)]="user.pseudo">
+            <mat-error *ngIf="this.formGroup.get('pseudo').invalid">Ce champ est obligatoire</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Entrer votre adresse email" formControlName="mail" required [(ngModel)]="user.mail">
+            <mat-error *ngIf="this.formGroup.get('mail').invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Entrer votre mot de passe" [type]="hide ? 'password' : 'text'" formControlName="password" [(ngModel)]="user.password">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            <mat-error *ngIf="this.formGroup.get('password').invalid">Ce champ est obligatoire</mat-error>
+        </mat-form-field>
+        <!--
+        <mat-form-field>
+            <input matInput placeholder="Cofirmation de votre mot de passe" [type]="hide ? 'password' : 'text'" formControlName="password2">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            <mat-error *ngIf="this.formGroup.get('password2').invalid">Ce champ est obligatoire</mat-error>
+        </mat-form-field>
+-->
+        <button mat-raised-button style="background-color: #4CAF50; color: white" type="submit" [disabled]="!this.formGroup.valid">Créer</button>
+        <mat-error *ngIf="errorOnCreate">Une erreur s'est produite lors de la création</mat-error>
+        <button mat-button color="primary" routerLink="/login" >s'authentifier</button>
+    </div>
+</form>

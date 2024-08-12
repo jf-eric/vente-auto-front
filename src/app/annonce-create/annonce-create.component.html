@@ -1,0 +1,140 @@
+
+<div class="container">
+    <div class="row">
+        <div class="card-body ">
+            <h4>Publiez votre offre gratuitement!</h4>
+        </div>
+    </div>
+    <form id="forme-demande-create" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Province</label>
+                <mat-select class="form-control" placeholder="Choisir votre province" name="province"(selectionChange)="madaChange($event)" [(ngModel)]="offreModel.province">
+                    <mat-option *ngFor="let pro of provinces" [value]="pro['value']"> {{pro['title']}}</mat-option>
+                </mat-select>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Ville</label>
+                <mat-select class="form-control" placeholder="Choisir votre ville" name="ville" [(ngModel)]="offreModel.ville">
+                    <mat-option *ngFor="let v of villes"  [value]="v['value']"> {{v['title']}}</mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="forme-vous">
+            <label class="col-sm-5" >Vous etes </label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input"  [value]="'PARTICULIER'"  [(ngModel)]="offreModel.type_personne">
+            <label class="custom-control-label" for="customRadio1">Particulier</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" [value]="'PROFESSIONNEL'"  [(ngModel)]="offreModel.type_personne">
+            <label class="custom-control-label" for="customRadio2">Professionnel</label>
+        </div><br>
+        <div class="form-group">
+            <label >Description</label>
+            <textarea class="form-control" id="" placeholder="Entrer les descriptions de votre offre"rows="4"[(ngModel)] = "offreModel.description_annonce" name="description"></textarea>
+        </div>
+        <label> date </label>
+        <div class="forme-date-demande">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" [(ngModel)] = "offreModel.date" name="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Année</label>
+            <mat-select  class="form-control" placeholder="Entrer l'année de lauto" [(ngModel)] = "offreModel.annee" name="annee">
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let an of Annees"   [value]="an">{{an}}</mat-option>
+            </mat-select>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Numero d'immatriculation</label>
+            <input type="Text" class="form-control" name="matricule" [(ngModel)] = "offreModel.matricule"  placeholder="Entrer le numero d'immatriculation">
+        </div>
+</div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Marque</label>
+                <mat-select class="form-control" placeholder="choisir une marque" name="marque" (selectionChange)="marcqueChange($event)" [(ngModel)] = "offreModel.marque">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let mq of marques" [value]="mq['value']">{{mq['title']}}</mat-option>
+                </mat-select>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Modele</label>
+                    <mat-select class="form-control" placeholder="choir un modele" name="modele" [(ngModel)]="offreModel.modele">
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let mo of modeles" [value]="mo['value']">{{mo['title']}}</mat-option>
+                    </mat-select>
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Carburant</label>
+                <mat-select class="form-control" placeholder="Choisir le type carburant"[(ngModel)] = "offreModel.carburant" name="carburant">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let ca of Carburants" [value]="ca">{{ca}}</mat-option>
+                </mat-select>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Boite de vitesse</label>
+                <mat-select class="form-control" placeholder="Choisir la boite de vitesse " [(ngModel)] = "offreModel.boite_vitesse" name="boite_vitesse">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let bt of Boites" [value]="bt">{{bt}}</mat-option>
+                </mat-select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Km</label>
+                <input type="text" class="form-control" id="" placeholder="Entrer le kilometrage"[(ngModel)] = "offreModel.km" name="km">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Prix</label>
+                <input type="text" class="form-control"  placeholder="Entrer le prix" [(ngModel)] = "offreModel.prix" name="prix">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 col-form-label">Numero</label>
+                <input type="text" class="form-control"  placeholder="Entrer votre numero télephone" [(ngModel)] = "offreModel.tel" name="tel">
+        </div>
+        <image-upload url="{{imgUploadUrl}}"
+                      (removed)="onRemoved($event)"
+                      (uploadFinished)="onUploadFinished($event)"
+                      (uploadStateChanged)="onUploadStateChanged($event)"
+                      buttonCaption="Choisir des images "
+                      dropBoxMessage="Glisser et déposer"
+                      clearButtonCaption="Effacer">
+        </image-upload>
+        <mat-error *ngIf="matriculeNotValid"><b>Numéro d'immatriculation non vérifé.</b> Veuillez contacter à l'administrateur.</mat-error>
+
+        <button class="forme_button" mat-raised-button color="primary" type="submit">Déposer Offre</button>
+
+    </form>
+
+</div>
+<div class="form-regle">
+    <div class="row" >
+        <div class="card-body "style="padding: 0.7%" >
+            <label>3 règles pour publier votre offre</label>
+        </div>
+    </div>
+    <form>
+        <div class="form-group row">
+            <mat-list role="list" >
+                <label>
+                    <mat-list-item style="color: white" role="listitem"><mat-icon>send</mat-icon> <mat-label style=" font-size: 11pt;">N'écrivez pas le prix dans la description</mat-label> </mat-list-item>
+                    <mat-list-item style="color: white"role="listitem"><mat-icon>send</mat-icon><mat-label style=" font-size: 11pt;">Ne publiez pas la même offre plusieurs fois</mat-label></mat-list-item>
+                    <mat-list-item style="color: white"role="listitem"><mat-icon>send</mat-icon><mat-label style=" font-size: 11pt;">Ne vendez pas de voiture illégaux</mat-label></mat-list-item>
+
+                </label>
+                    </mat-list>
+        </div>
+    </form>
+</div>

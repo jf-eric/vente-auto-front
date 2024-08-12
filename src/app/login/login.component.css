@@ -1,0 +1,39 @@
+.loginBox{
+    margin-top: 10%;
+    padding-top: 8%;
+
+    margin-right: auto;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: auto;
+    width: 700px;
+    height: 300px;
+    box-sizing:border-box;
+    background:rgb(255, 255, 255,0.8);
+
+}
+.user {
+    border-radius: 50%;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: calc(60px);
+    left: calc(50% - 70px);
+}
+#forme-boutton-inscrire{
+    position: absolute;
+    margin-top: -4%;
+    left: calc(67%);
+}
+.text-Authentification{
+    color: navy;
+    position: absolute;
+    font-size: 20pt;
+    font-style: oblique;
+    top: calc(220px);
+    left: calc(50% - 80px);
+}
+#accueil{
+    position: absolute;
+    margin-top:-4%;
+    left: calc(62%);
+}

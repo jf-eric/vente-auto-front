@@ -1,0 +1,38 @@
+.forme-demande{
+    margin-top: 3%;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+
+.example-header-image {
+    border-radius: 50%;
+    background-size: cover;
+}
+.forme-date-publication{
+    margin-left: 80%;
+}
+.forme-table-description{
+    padding-left: 67%;
+    margin-top: -10%;
+
+}
+.andrana{
+    width: 40%;
+    overflow:auto;
+
+}
+
+
+.scroll {
+
+    padding:10px; /* équivalent cellpadding */
+
+    width:300px;
+
+    overflow:auto; /* si ça dépasse on affiche la scrollbar */
+}

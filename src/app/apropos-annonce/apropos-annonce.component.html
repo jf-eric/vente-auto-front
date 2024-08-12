@@ -1,0 +1,102 @@
+<div *ngIf="!!offreModel ">
+    <div class="back">
+        <div class="teste">
+            <ngb-carousel >
+                <ng-template ngbSlide *ngFor="let image of offreModel.images">
+                    <img src="http://localhost:8080/vente-auto-back/images/{{image}}" height="400" width="800px"
+                         alt="Random third slide"/>
+                    <div class="carousel-caption">
+                        <h3>Défiler les images</h3>
+                    </div>
+                </ng-template>
+
+                <ng-template ngbSlide *ngIf="offreModel.images.length === 0">
+                    <img src="../../assets/img/bugatti.jpg" height="400" width="800px" alt="Random third slide"/>
+                    <div class="carousel-caption">
+                        <h3>Défiler les images</h3>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+
+        <div class="form-group row">
+            <table class="table2">
+                <tr>
+                    <td colspan=3 style="text-align: center;background-color: #4CAF50;width: 75%; color: white;">
+                        Critères
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>MARQUE</th>
+                    <th>MODELE</th>
+                    <th>ANNÉE</th>
+                </tr>
+                <tr>
+                    <td>{{offreModel.marque}}</td>
+                    <td>{{offreModel.modele}}</td>
+                    <td>{{offreModel.annee}}</td>
+                </tr>
+                <tr>
+                    <th>KILOMETRAGE</th>
+                    <th>CARBURANT</th>
+                    <th>BOÎTE DE VITESSE</th>
+                </tr>
+                <tr>
+                    <td>{{offreModel.km}}</td>
+                    <td>{{offreModel.carburant}}</td>
+                    <td>{{offreModel.boite_vitesse}}</td>
+                </tr>
+            </table>
+            <table class="table-description" width="41%">
+                <tr>
+                    <td colspan=3 style="text-align: center;background-color: #4CAF50;width: 75%; color: white;">
+                        Descriptions
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>{{offreModel.description_annonce}}</td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="formrTable1">
+        <TABLE width="65%" class="table1">
+            <TR>
+                <TD align=center>Prix</TD>
+                <TD align=center>{{offreModel.prix}} AR</TD>
+            </TR>
+            <TR>
+                <TD>Lieu:</TD>
+                <TD>{{offreModel.ville}}</TD>
+            </TR>
+            <TR>
+                <TD>Publiée:</TD>
+                <TD>{{offreModel.date}}</TD>
+            </TR>
+            <TR>
+                <TD>Matricule:</TD>
+                <TD>{{offreModel.matricule}}</TD>
+            </TR>
+        </TABLE>
+    </div>
+    <div class="btntelephone" >
+
+        <button mat-raised-button placement="top" ngbPopover="{{offreModel.tel}}"
+                style="background-color: #4CAF50; color: white">
+            <mat-icon>call</mat-icon>
+            Afficher le Téléphone
+        </button>
+    </div>
+</div>
+<!--
+<div class="btnContacte">
+    <button mat-raised-button style="background-color: #4CAF50; color: white" routerLink="/home/contacter-vendeur">
+        <mat-icon>email</mat-icon>
+        Contacter le vendeur
+    </button>
+</div>
+-->

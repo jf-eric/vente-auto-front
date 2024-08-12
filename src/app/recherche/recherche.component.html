@@ -1,0 +1,54 @@
+<div class="container">
+    <form class="form-recherche" (ngSubmit)="find()">
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label>Marque</label>
+                <mat-select class="form-control" placeholder="Marque" (selectionChange)="marcqueChange($event)"
+                            [(ngModel)]="offreRecherche.marque" name="marque">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let mq of marques" [value]="mq['value']">{{mq['title']}}</mat-option>
+                </mat-select>
+
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Model</label>
+                <mat-select class="form-control" placeholder="Modele" name="modele" [(ngModel)]="offreRecherche.modele">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let mo of modeles" [value]="mo['value']">{{mo['title']}}</mat-option>
+                </mat-select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label style="color: white">tr</label>
+                <button mat-raised-button id="forme-boutton-recherche" type="submit">
+                    <mat-icon>find_replace</mat-icon>
+                    Afficher votre recherche
+                </button>
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label>ville</label>
+                <mat-select class="form-control" placeholder="Modele" [(ngModel)]="offreRecherche.ville" name="ville">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let v of villes" [value]="v['value']">{{v['title']}}</mat-option>
+                </mat-select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>prix (<=)</label>
+                <input type="text" class="form-control" [(ngModel)]="offreRecherche.prix" name="prix">
+            </div>
+        </div>
+        <div class="form-row"></div>
+    </form>
+    <div class="col-md-4 mb-3">
+        <label style="color: white">tr</label>
+        <button mat-raised-button class="forme-boutton-annuler" (click)="reset()">
+            <mat-icon>highlight_off</mat-icon>
+            Annuler la recherche
+        </button>
+    </div>
+
+</div>
+

@@ -1,0 +1,25 @@
+.forme-registration{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    padding:10px ;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+}
+.toolbar-registration{
+    width: 30%;
+    padding:10px ;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    background: navy;
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+

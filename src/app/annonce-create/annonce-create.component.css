@@ -1,0 +1,38 @@
+.container{
+    width: 70%;
+    background-color: white;
+    margin-top: 3%;
+
+}
+.card-body{
+    padding: 0.5%;
+    color: white;
+    text-align: center;
+    background-color: rgb(120, 120, 120);
+}
+#forme-demande-create{
+    width: 60%;
+    padding-top: 2%;
+}
+
+.forme-date-demande{
+    padding-left: 18%;
+    margin-top: -10%;
+}
+.forme_button{
+    margin-top: 5%;
+}
+.form-regle{
+    width: 24%;
+    margin-top: -70.4%;
+    margin-left:58.8%;
+    background-color:navy;
+    font-size: 10pt;
+
+}
+.custom-control-label{
+    padding-left: 5%;
+}
+.forme-vous{
+margin-left: -3%;
+}

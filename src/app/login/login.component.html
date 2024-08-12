@@ -1,0 +1,38 @@
+
+
+<mat-horizontal-stepper  class="loginBox" >
+
+  <mat-step [stepControl]="FormGroup1">
+    <form [formGroup]="FormGroup1">
+      <ng-template matStepLabel >Remplir votre Pseudo</ng-template><mat-form-field>
+      <input matInput placeholder="Pseudo" formControlName="firstCtrl"  name="pseudo">
+    </mat-form-field>
+      <div>
+        <button mat-button matStepperNext color="primary">Suivant</button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+  <mat-step [stepControl]="FormGroup3">
+    <form [formGroup]="FormGroup3">
+      <ng-template matStepLabel>Remplir votre mot de passe</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Mot de passe" formControlName="thirdCtrl"  name="password" type="password">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious color="primary">Retour</button>
+        <button mat-raised-button color="primary" (click)="login()">Se connecter</button>
+        <mat-error *ngIf="notAuthorized">Les informations saisies ne sont pas correctes</mat-error>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>
+<img src="../../assets/img/imageLogin.jpg" alt="Avatar" class="user"/>
+
+<button mat-button color="primary" id="forme-boutton-inscrire" routerLink="/registration"> S'inscrire</button>
+<button mat-button color="primary" id="accueil" routerLink="/home/image-home">Accueil</button>
+
+<p class="text-Authentification">Authentification</p>
+

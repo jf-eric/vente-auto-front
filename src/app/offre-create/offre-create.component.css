@@ -1,0 +1,31 @@
+.forme-offre{
+    margin-top: 3%;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+
+.tableOffre{
+    display: block;
+    padding-left: 25%;
+    margin-top: -18%;
+
+}
+#imageOffre{
+}
+.formePrix{
+    font-style: italic;
+    padding-left:80%;
+    font-size:20pt;
+    font-family: "Footlight MT Light";
+    margin-top: -22%;
+}
+.formeModele{
+    font-family:Jazz LET, fantasy;
+    font-size: 20pt;
+    color: navy;
+}

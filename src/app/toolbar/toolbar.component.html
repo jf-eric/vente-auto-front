@@ -1,0 +1,55 @@
+<mat-toolbar class="toolbar" color="primary">
+  <span class="fill-remaining-space">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item routerLink="toolbar">
+        <mat-icon>home</mat-icon>
+        <span>Accuel</span>
+      </button>
+      <button mat-menu-item routerLink="/home/my-offers">
+        <mat-icon>account_circle</mat-icon>
+        <span>Mon compte</span>
+      </button>
+
+    </mat-menu>
+  </span>
+    <span class="fill-remaining-space">Menu</span>
+    <!--<div class="button-row">-->
+
+    <p class="espace1">
+            <span class="fill-remaining-space">
+            </span>
+    </p>
+    <button mat-button [matMenuTriggerFor]="annonce">
+        Deposer une annonce
+    </button>
+
+    <mat-menu #annonce="matMenu" [overlapTrigger]="false">
+        <button mat-button routerLink="/home/annonce-create">une offre</button>
+
+        <button mat-menu-item routerLink="/home/demande-create">
+            <span>une demande</span>
+        </button>
+    </mat-menu>
+    <button mat-button routerLink="/home/offre-create">Toutes les offres</button>
+    <button mat-button routerLink="/home/demande">Toutes les demandes</button>
+    <button mat-button routerLink="/home/information">Les informations</button>
+
+    <!-- </div>-->
+    <p class="espace2">
+        <span *ngIf="connecte"><img id="image" style="border-radius: 55%" src="../../assets/img/imgLogin.PNG"
+                                    height="40" width="40"/>
+            {{currentUser.nom}} {{currentUser.prenom}} </span>
+    </p>
+    <button  *ngIf="!connecte" mat-button routerLink="/login">
+        <mat-icon>exit_to_app</mat-icon>
+        <span >S' Authentifier</span>
+    </button>
+    <button *ngIf="connecte" mat-button (click)="openDialog()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span >Se déconnécter</span>
+    </button>
+</mat-toolbar>

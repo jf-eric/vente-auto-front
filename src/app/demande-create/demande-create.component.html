@@ -1,0 +1,65 @@
+
+<div class="container">
+
+    <div class="row">
+        <div class="card-body ">
+            <h4>Publiez votre demande gratuitement!</h4>
+        </div>
+
+    </div>
+    <form id="forme-demande-create" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Titre </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="" placeholder="Entrer le titre de votre demande"name="titre" [(ngModel)] = "demandeModel.titre_demande">
+            </div>
+        </div>
+        <div class="forme-vous">
+            <label class="col-sm-5" >Vous etes </label>
+        </div>
+
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input"  >
+            <label class="custom-control-label" for="customRadio1">Particulier</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" >
+            <label class="custom-control-label" for="customRadio2">Professionnel</label>
+        </div><br>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="" placeholder="Entrer les descriptions de votre demande"rows="4" name="description" [(ngModel)] = "demandeModel.description_demande"></textarea>
+
+            </div>
+        </div>
+<label> date </label>
+        <div class="forme-date-demande">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" name="date" [(ngModel)] = "demandeModel.date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Nom</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="" placeholder="Entrer votre nom"  name="nom" [(ngModel)] = "demandeModel.nom">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="" placeholder="Entrer votre adresse email" name="email" [(ngModel)] = "demandeModel.email">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Numero</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="" placeholder="Entrer votre numero télephone" name="tel" [(ngModel)] = "demandeModel.tel">
+            </div>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Déposer demande</button>
+    </form>
+</div>

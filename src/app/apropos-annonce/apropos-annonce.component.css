@@ -1,0 +1,59 @@
+
+.mat-sort-header-container {
+    align-items: center;
+}
+.teste{
+    display: block;
+    width: 70%;
+    padding-top:3%;
+    padding-left:  1.5%;
+
+
+}
+.back{
+    margin-top: 3%;
+    background-color: white;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+.formrTable1{
+    display: block;
+    margin-top: -645px;
+    font-family: "Times New Roman", sans-serif;
+    border-collapse: collapse;
+    margin-left:  67%;
+}
+.table2 {
+    display: block;
+    padding-top:  3%;
+    font-family: "Times New Roman", sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    padding-left:  3%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.btntelephone{
+    display: block;
+    margin-top: 4%;
+    margin-left: 71%;
+}
+.btnContacte{
+    display: block;
+    margin-top: 1%;
+    margin-left: 71%;
+}
+.table-description{
+    margin-left: 56%;
+    margin-top: -18.5%;
+}

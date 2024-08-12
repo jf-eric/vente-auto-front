@@ -1,0 +1,18 @@
+.container{
+
+    width: 45%;
+    border: 1px solid grey;
+    background-color: white;
+    margin-top: 5%;
+}
+.card-body{
+    padding: 0.5%;
+    text-align: center;
+background-color: rgb(120, 120, 120);
+}
+#emplacement-forme{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.form-control{
+}

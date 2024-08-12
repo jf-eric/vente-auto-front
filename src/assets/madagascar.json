@@ -1,0 +1,286 @@
+[
+  {
+    "value": "Antananarivo",
+    "title": "Antananarivo",
+    "models": [
+      {
+        "value": "Ambatolampy",
+        "title": "Ambatolampy"
+      },
+      {
+        "value": "Ambatomanga",
+        "title": "Ambatomanga"
+      },
+      {
+        "value": "Ambohibary Sambaina",
+        "title": "Ambohibary Sambaina"
+      },
+      {
+        "value": "Ambohimiadana",
+        "title": "Ambohimiadana"
+      },
+      {
+        "value": "Ampefy",
+        "title": "Ampefy"
+      },
+      {
+        "value": "Antsirabe",
+        "title": "Antsirabe"
+      },
+      {
+        "value": "Arivonimamo",
+        "title": "Arivonimamo"
+      },
+      {
+        "value": "Antanifotsy",
+        "title": "Antanifotsy"
+      },
+      {
+        "value": "Andramasina",
+        "title": "Andramasina"
+      },
+      {
+        "value": "Andoharanofotsy",
+        "title": "Andoharanofotsy"
+      },
+      {
+        "value": "Betafo",
+        "title": "Betafo"
+      },
+      {
+        "value": "Behenjy",
+        "title": "Behenjy"
+      },
+      {
+        "value": "Fenoarivo",
+        "title": "Fenoarivo"
+      },
+      {
+        "value": "Ivato",
+        "title": "Ivato"
+      }
+      ]
+  },
+  {
+    "value": "Antsiranana",
+    "title": "Antsiranana",
+    "models": [
+      {
+        "value": "Ambadiangezoka",
+        "title": "Ambadiangezoka"
+      },
+      {
+        "value": "Ambanja",
+        "title": "Ambanja"
+      },
+      {
+        "value": "Ambilobe",
+        "title": "Ambilobe"
+      },
+      {
+        "value": "Ampanefena",
+        "title": "Ampanefena"
+      },
+      {
+        "value": "Antalaha",
+        "title": "Antalaha"
+      },
+      {
+        "value": "Nosy Be",
+        "title": "Nosy Be"
+      },
+      {
+        "value": "Sambava",
+        "title": "Sambava"
+      },
+      {
+        "value": "Vohémar",
+        "title": "Vohémar"
+      }
+    ]
+  },
+  {
+    "value": "Fianarantsoa",
+    "title": "Fianarantsoa",
+    "models": [
+      {
+        "value": "Alakamisy Itenina",
+        "title": "Alakamisy Itenina"
+      },
+      {
+        "value": "Ambinanindrano",
+        "title": "Ambinanindrano"
+      },
+      {
+        "value": "Ambositra",
+        "title": "Ambositra"
+      },
+      {
+        "value": "Ankarinoro",
+        "title": "Ankarinoro"
+      },
+      {
+        "value": "Ambohimahasoa",
+        "title": "Ambohimahasoa"
+      },
+      {
+        "value": "Ambovombe",
+        "title": "Ambovombe"
+      },
+      {
+        "value": "Ambalavao",
+        "title": "Ambalavao"
+      },
+      {
+        "value": "Ambatofinandrahana",
+        "title": "Ambatofinandrahana"
+      },
+      {
+        "value": "Befotaka Sud",
+        "title": "Befotaka Sud"
+      },
+      {
+        "value": "Fandriana",
+        "title": "Fandriana"
+      },
+      {
+        "value": "Farafangana",
+        "title": "Farafangana"
+      },
+      {
+        "value": "Ranomafana",
+        "title": "Ranomafana"
+      }
+    ]
+  },
+  {
+  "value": "Mahajanga",
+  "title": "Mahajanga",
+  "models": [
+    {
+      "value": "Ambato-boeni",
+      "title": "Ambato-boeni"
+    },
+    {
+      "value": "Anahidrano",
+      "title": "Anahidrano"
+    },
+    {
+      "value": "Antonibe",
+      "title": "Antonibe"
+    },
+    {
+      "value": "Antsohihy",
+      "title": "Antsohihy"
+    },
+    {
+      "value": "Antsalova",
+      "title": "Antsalova"
+    },
+    {
+      "value": "Bealanana",
+      "title": "Bealanana"
+    },
+    {
+      "value": "Befandriana Nord",
+      "title": "Befandriana Nord"
+    },
+    {
+      "value": "Besalampy",
+      "title": "Besalampy"
+    },
+    {
+      "value": "Marovoay",
+      "title": "Marovoay"
+    },
+    {
+      "value": "Maevatanana",
+      "title": "Maevatanana"
+    },
+    {
+      "value": "Port Bergé",
+      "title": "Port Bergé"
+    }
+  ]
+},
+  {
+    "value": "Toamasina",
+    "title": "Toamasina",
+    "models": [
+      {
+        "value": "Ambatondrazaka",
+        "title": "Ambatondrazaka"
+      },
+      {
+        "value": "Ambinanindrano Est",
+        "title": "Ambinanindrano Est"
+      },
+      {
+        "value": "Amparafaravola",
+        "title": "Amparafaravola"
+      },
+      {
+        "value": "Brickaville",
+        "title": "Brickaville"
+      },
+      {
+        "value": "Fenerive Est",
+        "title": "Fenerive Est"
+      },
+      {
+        "value": "Foulpointe",
+        "title": "Foulpointe"
+      },
+      {
+        "value": "Moramanga",
+        "title": "Moramanga"
+      },
+      {
+        "value": "Sainte Marie",
+        "title": "Sainte Marie"
+      }
+    ]
+  },
+  {
+    "value": "Toliara",
+    "title": "Toliara",
+    "models": [
+      {
+        "value": "Ambovombe",
+        "title": "Ambovombe"
+      },
+      {
+        "value": "Ankilizato",
+        "title": "Ankilizato"
+      },
+      {
+        "value": "Ampanihy Ouest",
+        "title": "Ampanihy Ouest"
+      },
+      {
+        "value": "Belo Tsiribihina",
+        "title": "Belo Tsiribihina"
+      },
+      {
+        "value": "Betioky",
+        "title": "Betioky"
+      },
+      {
+        "value": "Betroka",
+        "title": "Betroka"
+      },
+      {
+        "value": "Ejeda",
+        "title": "Ejeda"
+      },
+      {
+        "value": "Morondava",
+        "title": "Morondava"
+      },
+      {
+        "value": "Betroka",
+        "title": "Sakaraha"
+      }
+    ]
+  }
+]

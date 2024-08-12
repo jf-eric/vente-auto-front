@@ -1,0 +1,132 @@
+<app-recherche (offreRechercheChanged)="offreRechercheChangedHandler($event)"></app-recherche>
+<mat-tab-group class="forme-offre">
+    <mat-tab label="Toutes" >
+        <mat-card *ngFor="let offre of offres | offreRecherchePipe: offreRecherche " >
+<div class="form-group row" >
+
+    <div id="imageOffre">
+        <img *ngIf="offre['images'].length > 0" src="http://localhost:8080/vente-auto-back/images/{{offre['images'][0]}}" height="200" width="200"/>
+        <img *ngIf="offre['images'].length === 0" src="../../assets/img/bugatti.jpg" height="200" width="200"/>
+    </div>
+    <div class="formePrix">
+        <label>{{offre['prix']| number}}Ar</label>
+    </div>
+    <div class="tableOffre" >
+
+        <mat-label class="formeModele"> {{offre['marque']}} {{offre['modele']}}</mat-label>
+        <table >
+
+            <tr>
+                <td>Lieu:</td>
+                <td>{{offre['ville']}}</td>
+            </tr>
+            <tr>
+                <td>Date de publication:</td>
+                <td>{{offre.date}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btnContacte">
+                        <button mat-raised-button [routerLink]="['/home/apropos-annonce', offre['id']]"
+                                style="background-color: #4CAF50; color: white">Apropos
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</div>
+        </mat-card>
+
+
+    </mat-tab>
+    <mat-tab label="Particuliers">
+        <mat-card *ngFor="let offre of filtreOffres('PARTICULIER') | offreRecherchePipe: offreRecherche ">
+<div class="form-group row">
+    <div class="imageOffre">
+
+        <img *ngIf="offre['images'].length > 0" src="http://localhost:8080/vente-auto-back/images/{{offre['images'][0]}}" height="200" width="200"/>
+        <img *ngIf="offre['images'].length === 0" src="../../assets/img/bugatti.jpg" height="200" width="200"/>
+    </div>
+
+    <div class="formePrix">
+        <label>{{offre['prix'] | number}}Ar</label>
+    </div>
+    <div class="tableOffre">
+        <TABLE >
+
+            <TR class="formeModele">
+                <TD>{{offre['marque']}} {{offre['modele']}}</TD>
+            </TR>
+            <TR>
+                <TD>Lieu:</TD>
+                <td>{{offre['ville']}}</td>
+            </TR>
+            <TR>
+                <TD>Date de publication:</TD>
+                <td>{{offre.date}}</td>
+            </TR>
+            <TR>
+                <TD>
+                    <div class="btnContacte">
+                        <button mat-raised-button [routerLink]="['/home/apropos-annonce', offre['id']]"
+                                style="background-color: #4CAF50; color: white">Apropos
+                        </button>
+                    </div>
+                </TD>
+            </TR>
+        </TABLE>
+    </div>
+
+
+</div>
+
+
+        </mat-card>
+    </mat-tab>
+
+    <mat-tab label="Professionnels">
+        <mat-card *ngFor="let offre of filtreOffres('PROFESSIONNEL') | offreRecherchePipe: offreRecherche ">
+<div class="form-group row">
+    <div class="imageOffre">
+
+        <img *ngIf="offre['images'].length > 0" src="http://localhost:8080/vente-auto-back/images/{{offre['images'][0]}}" height="200" width="200"/>
+        <img *ngIf="offre['images'].length === 0" src="../../assets/img/bugatti.jpg" height="200" width="200"/>
+    </div>
+    <div class="formePrix">
+        <label>{{offre['prix'] | number}}Ar</label>
+    </div>
+    <div class="tableOffre">
+        <TABLE>
+            <TR class="formeModele">
+                <TD>{{offre['marque']}} {{offre['modele']}}</TD>
+            </TR>
+            <TR>
+                <TD>Lieu:</TD>
+                <td>{{offre['ville']}}</td>
+            </TR>
+            <TR>
+                <TD>Date de publication:</TD>
+                <td>{{offre.date}}</td>
+            </TR>
+            <TR>
+                <TD>
+                    <div class="btnContacte">
+                        <button mat-raised-button [routerLink]="['/home/apropos-annonce', offre['id']]"
+                                style="background-color: #4CAF50; color: white">Apropos
+                        </button>
+                    </div>
+                </TD>
+            </TR>
+        </TABLE>
+    </div>
+
+</div>
+
+        </mat-card>
+    </mat-tab>
+</mat-tab-group>
+
